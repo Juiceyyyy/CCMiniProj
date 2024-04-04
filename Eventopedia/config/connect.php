@@ -1,8 +1,11 @@
 <?php
-$servername = 'miniproj.mysql.database.azure.com';
-$username='miniproj1server';
-$password='Joshua*2024';
-$dbname="miniproj";
+$con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+mysqli_real_connect($conn, "miniproj.mysql.database.azure.com", "miniproj1server", "Joshua*2024", "eventopedia", 3306, MYSQLI_CLIENT_SSL);
+// $servername = 'miniproj.mysql.database.azure.com';
+// $username='miniproj1server';
+// $password='Joshua*2024';
+// $dbname="miniproj";
 function connect()
 {
 
